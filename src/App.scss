@@ -1,7 +1,187 @@
+@import url("https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+@import "./variables/variables.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .map {
   &__container {
     height: 400px;
     max-width: 800px;
     width: 100%;
+  }
+}
+
+.plane {
+  &__spinner {
+    max-width: 300px;
+    text-align: center;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__plane {
+    color: $blue;
+    font-size: 30px;
+    padding-bottom: 15px;
+    position: relative;
+    animation: pulse 2s ease infinite;
+  }
+
+  &__loading {
+    display: inline-block;
+    position: absolute;
+    left: -23px;
+    top: -23px;
+    width: 64px;
+    height: 64px;
+
+    div {
+      display: block;
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      margin: 6px;
+      border: 4px solid $blue;
+      border-radius: 50%;
+      animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      border-color: $blue transparent transparent transparent;
+
+      &:nth-child(1) {
+        animation-delay: -0.45s;
+      }
+      &:nth-child(2) {
+        animation-delay: -0.3s;
+      }
+      &:nth-child(3) {
+        animation-delay: -0.15s;
+      }
+    }
+  }
+}
+
+.train {
+  &__spinner {
+    max-width: 300px;
+    text-align: center;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__train {
+    color: $blue;
+    font-size: 30px;
+    padding-bottom: 15px;
+    position: relative;
+    animation: pulse 2s ease infinite;
+  }
+
+  &__loading {
+    display: inline-block;
+    position: absolute;
+    left: -28px;
+    top: -24px;
+    width: 64px;
+    height: 64px;
+
+    div {
+      display: block;
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      margin: 6px;
+      border: 4px solid $blue;
+      border-radius: 50%;
+      animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      border-color: $blue transparent transparent transparent;
+
+      &:nth-child(1) {
+        animation-delay: -0.45s;
+      }
+      &:nth-child(2) {
+        animation-delay: -0.3s;
+      }
+      &:nth-child(3) {
+        animation-delay: -0.15s;
+      }
+    }
+  }
+}
+
+.hotel {
+  &__spinner {
+    max-width: 300px;
+    text-align: center;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__hotel {
+    color: $blue;
+    font-size: 30px;
+    padding-bottom: 15px;
+    position: relative;
+    animation: pulse 2s ease infinite;
+  }
+
+  &__loading {
+    display: inline-block;
+    position: absolute;
+    left: -24px;
+    top: -24px;
+    width: 64px;
+    height: 64px;
+
+    div {
+      display: block;
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      margin: 6px;
+      border: 4px solid $blue;
+      border-radius: 50%;
+      animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      border-color: $blue transparent transparent transparent;
+
+      &:nth-child(1) {
+        animation-delay: -0.45s;
+      }
+      &:nth-child(2) {
+        animation-delay: -0.3s;
+      }
+      &:nth-child(3) {
+        animation-delay: -0.15s;
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(0.95);
+  }
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

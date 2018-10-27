@@ -1,16 +1,24 @@
 import React, { Component } from "react";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import Flights from "./containers/Flights/Flights";
 import "./App.scss";
-import CustomMap from "./containers/map/CustomMap";
-import Flights from "./containers/flights/Flights";
+import Layout from "./components/Layout/Layout";
+import Homepage from "./components/Homepage/Homepage";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="test">FLIGHT APENCJUM</div>
-        <CustomMap />
-        <Flights />
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Layout>
+            <Switch>
+              <Route path="/flights" component={Flights} />
+              <Route path="/" exact component={Homepage} />
+              <Redirect to="/" />
+            </Switch>
+          </Layout>
+        </div>
+      </BrowserRouter>
     );
   }
 }
